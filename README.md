@@ -1,20 +1,23 @@
+
+# Akhilesh Narotra Portfolio
+
+Welcome to my personal portfolio site built with HTML and CSS. This site showcases my background in software QA, energy modeling, and UX design.
 https://min-ti.github.io/4-port/
 
 
-# Systems Engineer | Portfolio
+## Skills
+- QA Testing (Selenium, JIRA)
+- Energy Modeling (RETScreen, Power BI)
+- UX/UI Design (Figma)
+- Programming (Python, Java, SQL)
 
-A minimalist, tech-focused portfolio website built with plain HTML, CSS, and JavaScript.  
-Perfect for showcasing projects in clean energy, software engineering, and more.
+## Projects
+- Web Banking QA Testing
+- Energy Audit – RETScreen
+- UX Redesign – Student Portal
 
-## Getting Started
-1. Clone this repository.
-2. Add your project images in the `images/` directory.
-3. Push to GitHub and enable GitHub Pages for free hosting.
 
-## Technologies
-- HTML5
-- CSS3
-- JavaScript (vanilla)
 
 ## Contact
 Email: `arnsurecan@gmail.com`
+www.linkedin.com/in/akhilesh-narotra-30b567290
