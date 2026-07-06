@@ -3,120 +3,339 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akhilesh Narotra | Portfolio</title>
+  <title>Akhilesh Narotra — QA Analyst &amp; Technical Support Professional</title>
+  <meta name="description" content="Portfolio of Akhilesh Narotra: QA analyst and technical support professional working across web systems, data operations, and energy engineering.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="#home" class="brand">AN&nbsp;/&nbsp;LOG</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Home Section -->
-    <section id="home" class="home">
-      <h1>AKHILESH NAROTRA</h1>
-<h2>Quality in Code. Confidence in Experience.</h2>
-      <h2>アキレシュ ナロトラ</h2>
-      <img src="assets/me.jpg" alt="Akhilesh Narotra" class="profile-pic">
-      <p class="tagline">Energy Systems Engineer & Digital Product Designer</p>
-      <p class="tagline-sub">Combining technical expertise with minimalist design principles</p>
-    </section>
 
-    <!-- Projects Section -->
-    
-<section id="projects" style="margin-bottom: 100px;">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Software Testing – Web Banking Application</h3>
-    <p><strong>Role:</strong> QA Engineer</p>
-    <p><strong>Description:</strong> Ensured functionality and stability of a multi-feature banking application.</p>
-    <ul>
-      <li>Automated 50+ test cases (login, transactions) using Selenium WebDriver.</li>
-      <li>Logged 40+ defects in JIRA; resolved critical bugs via cross-team collaboration.</li>
-      <li>Delivered test plans, bug reports, and coverage metrics post-regression testing.</li>
-    </ul>
-    <p><strong>Tools:</strong> Selenium, JIRA, Agile methodologies.</p>
-  </div>
-
-  <div class="project">
-    <h3>UX Redesign – Online Student Portal</h3>
-    <p><strong>Role:</strong> UX/UI Designer</p>
-    <p><strong>Description:</strong> Revamped a college portal to improve accessibility and user experience.</p>
-    <ul>
-      <li>Created wireframes and high-fidelity mockups with WCAG-compliant design.</li>
-      <li>Enhanced mobile responsiveness and reduced navigation friction by 30%.</li>
-      <li>Conducted usability testing to validate redesign effectiveness.</li>
-    </ul>
-    <p><strong>Tools:</strong> Figma, user personas, A/B testing.</p>
-  </div>
-
-  <div class="project">
-    <h3>Mobile Prototype – Meditation & Wellness App</h3>
-    <p><strong>Role:</strong> UX Designer</p>
-    <p><strong>Description:</strong> Designed a calming mobile app for meditation and habit tracking.</p>
-    <ul>
-      <li>Applied color psychology and minimalist UI to promote user relaxation.</li>
-      <li>Integrated guided meditation modules and feedback systems.</li>
-      <li>Tested prototypes via A/B usability sessions.</li>
-    </ul>
-    <p><strong>Tools:</strong> Figma, Adobe XD, user journey mapping.</p>
-  </div>
-
-  <div class="project">
-    <h3>Solar and Battery Storage System – Isla Mocha, Chile</h3>
-    <p><strong>Role:</strong> Renewable Energy System Designer</p>
-    <p><strong>Description:</strong> Designed a 50 kW solar PV system with lithium-ion batteries to replace diesel generators.</p>
-    <ul>
-      <li>Conducted solar resource assessments, load forecasting, and stakeholder consultations.</li>
-      <li>Demonstrated 7.2-year payback period, electrified 30 houses, ensured 2-day battery autonomy.</li>
-      <li>Aligned with Chile’s renewable energy goals, reducing emissions and costs.</li>
-    </ul>
-    <p><strong>Tools:</strong> RETScreen, stakeholder mapping, financial modeling.</p>
-  </div>
-
-  <div class="project">
-    <h3>Energy Efficiency Audit – Viscount Alexander Public School</h3>
-    <p><strong>Role:</strong> Energy Auditor & Analyst</p>
-    <p><strong>Description:</strong> Led a retrofit project to optimize energy use in a 2,258 m² school building.</p>
-    <ul>
-      <li>Identified inefficiencies in HVAC and lighting, proposing 10.9% annual savings.</li>
-      <li>4.4-year payback, 54.3% IRR, 8.7% GHG reduction demonstrated in analysis.</li>
-      <li>Recommended 36 occupancy sensors to cut further usage.</li>
-    </ul>
-    <p><strong>Tools:</strong> RETScreen, benchmarking, cost-benefit analysis.</p>
-  </div>
-</section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <div class="contact-box">
-        <div class="contact-info">
-          <p>Email: <a href="mailto:arnsecurecan@gmail.com">arnsecurecan@gmail.com</a></p>
-          <p><a href="Akhilesh_Narotra_Resume.pdf" download>Download Resume</a></p>
-          <p><a href="https://www.linkedin.com/in/akhilesh-narotra-30b567290" target="_blank">LinkedIn Profile</a></p>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="wrap">
+        <span class="status-pill"><span class="dot"></span>Open to opportunities — Ottawa, ON</span>
+        <div class="hero-grid">
+          <div>
+            <h1>Akhilesh Narotra</h1>
+            <p class="role">QA Analyst &amp; Technical Support Professional — AI, Data &amp; Web Systems</p>
+            <p class="summary">Results-driven QA analyst and technical support professional with hands-on experience in software testing, data operations, and user support. Skilled in manual and automated testing, defect tracking, regression testing, and data quality assurance — bridging technical challenges with user needs.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">View project log</a>
+              <a class="btn" href="Akhilesh_Narotra_Resume.pdf" download>Download résumé</a>
+            </div>
+          </div>
+          <img src="assets/me.jpg" alt="Portrait of Akhilesh Narotra" class="profile-pic">
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-        </form>
       </div>
     </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><span class="idx">01</span><h2>Summary</h2></div>
+        <p class="section-intro" style="margin-top:0;">
+          Results-driven QA analyst and technical support professional with hands-on experience in software testing, data operations, and user support. Skilled in manual and automated testing (Selenium WebDriver), defect tracking (JIRA/Agile), regression testing, and data quality assurance (SQL, Power BI). Proficient in Python, AWS, and Linux. Detail-oriented and solution-focused, bridging technical challenges with user needs. Seeking QA Analyst, Technical Support Engineer, or Data Quality Analyst roles.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><span class="idx">02</span><h2>Skills</h2></div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>QA &amp; Testing</h3>
+            <div class="tag-row">
+              <span class="tag">Manual Testing</span>
+              <span class="tag">Test Automation (Selenium)</span>
+              <span class="tag">Test Case Design</span>
+              <span class="tag">UAT</span>
+              <span class="tag">Defect Tracking (JIRA)</span>
+              <span class="tag">Bug Reporting</span>
+              <span class="tag">Agile/Scrum</span>
+              <span class="tag">SDLC</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Technical Support</h3>
+            <div class="tag-row">
+              <span class="tag">Windows / macOS</span>
+              <span class="tag">Linux/Ubuntu (VirtualBox)</span>
+              <span class="tag">Troubleshooting</span>
+              <span class="tag">Remote Diagnostics</span>
+              <span class="tag">Service Request Handling</span>
+              <span class="tag">User Account Mgmt</span>
+              <span class="tag">Configuration Tracking</span>
+              <span class="tag">Customer Service</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; Analytics</h3>
+            <div class="tag-row">
+              <span class="tag">SQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Data Validation</span>
+              <span class="tag">Data Quality Assurance</span>
+              <span class="tag">Excel (Advanced)</span>
+              <span class="tag">CRM</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">C++</span>
+              <span class="tag">HTML / CSS / JS</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; Data Science</h3>
+            <div class="tag-row">
+              <span class="tag">Generative AI</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">AI Product Strategy</span>
+              <span class="tag">User Research</span>
+              <span class="tag">A/B Testing</span>
+              <span class="tag">LLM / NLP</span>
+              <span class="tag">Prompt Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head"><span class="idx">03</span><h2>Experience</h2></div>
+
+        <div class="log-entry">
+          <div class="log-date">NOV 2024 —<br>PRESENT</div>
+          <div class="log-body">
+            <h3>Junior Data Operations Analyst</h3>
+            <p class="org">Weldforce Corporation (Remote), Mississauga</p>
+            <ul>
+              <li>Processed and qualified 50+ weekly inbound student leads in CRM, ensuring accurate data entry and timely distribution to the sales team.</li>
+              <li>Audited and cleaned the lead database using QA methodologies (deduplication and validation rules), improving overall data accuracy by 20%.</li>
+              <li>Created standardized checklists for lead tracking and data entry, reducing processing errors by 15% and ensuring team consistency.</li>
+              <li>Generated weekly data quality reports using Excel and CRM analytics, identifying trends and areas for improvement.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-date">SEP 2024 —<br>PRESENT</div>
+          <div class="log-body">
+            <h3>Sales Associate (Customer Support Focus)</h3>
+            <p class="org">Winners (TJX Canada), Ottawa</p>
+            <ul>
+              <li>Resolved 50+ daily customer inquiries, replicating transactional issues and escalating system inconsistencies to management for investigation.</li>
+              <li>Maintained 98% accuracy in cash handling and inventory cross-checking, applying checklist-based verification similar to QA test case execution.</li>
+              <li>Collaborated with the team to meet daily sales targets while supporting store flow, merchandising standards, and operational consistency.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><span class="idx">04</span><h2>Project Log</h2></div>
+        <p class="section-intro">Five closed tickets spanning QA, UX design, and renewable energy systems.</p>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span class="ticket-id">AN-001 · QA Engineer</span>
+            <span class="ticket-status">RESOLVED</span>
+          </div>
+          <div class="ticket-body">
+            <h3>Software Testing — Web Banking Application</h3>
+            <p class="ticket-role">Ensuring functionality and stability of a multi-feature banking application</p>
+            <ul>
+              <li>Automated 50+ test cases (login, transactions) with Selenium WebDriver, cutting regression testing time by 30%.</li>
+              <li>Logged 40+ defects in JIRA and resolved critical bugs through cross-team collaboration.</li>
+              <li>Delivered test plans, bug reports, and coverage metrics after each regression cycle.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Selenium</span><span class="tag">JIRA</span><span class="tag">Agile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span class="ticket-id">AN-002 · UX/UI Designer</span>
+            <span class="ticket-status">SHIPPED</span>
+          </div>
+          <div class="ticket-body">
+            <h3>UX Redesign — Online Student Portal</h3>
+            <p class="ticket-role">Revamping a college portal for accessibility and ease of use</p>
+            <ul>
+              <li>Built wireframes and high-fidelity mockups to a WCAG-compliant standard.</li>
+              <li>Improved mobile responsiveness and cut navigation friction by 30%.</li>
+              <li>Ran usability testing sessions to validate the redesign before handoff.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Figma</span><span class="tag">User personas</span><span class="tag">A/B testing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span class="ticket-id">AN-003 · UX Designer</span>
+            <span class="ticket-status">PROTOTYPED</span>
+          </div>
+          <div class="ticket-body">
+            <h3>Mobile Prototype — Meditation &amp; Wellness App</h3>
+            <p class="ticket-role">Designing a calming mobile app for meditation and habit tracking</p>
+            <ul>
+              <li>Applied color psychology and minimalist UI to support relaxation.</li>
+              <li>Built guided meditation modules and in-app feedback loops.</li>
+              <li>Validated the prototype through A/B usability sessions.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Figma</span><span class="tag">Adobe XD</span><span class="tag">Journey mapping</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span class="ticket-id">AN-004 · Renewable Energy System Designer</span>
+            <span class="ticket-status">DEPLOYED</span>
+          </div>
+          <div class="ticket-body">
+            <h3>Solar &amp; Battery Storage System — Isla Mocha, Chile</h3>
+            <p class="ticket-role">50 kW solar PV system with lithium-ion storage, replacing diesel generators</p>
+            <ul>
+              <li>Ran solar resource assessments, load forecasting, and stakeholder consultations.</li>
+              <li>Modeled a 7.2-year payback period, electrifying 30 houses with 2-day battery autonomy.</li>
+              <li>Aligned the design with Chile's renewable energy targets, cutting emissions and operating cost.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">RETScreen</span><span class="tag">Stakeholder mapping</span><span class="tag">Financial modeling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span class="ticket-id">AN-005 · Energy Auditor &amp; Analyst</span>
+            <span class="ticket-status">AUDITED</span>
+          </div>
+          <div class="ticket-body">
+            <h3>Energy Efficiency Audit — Viscount Alexander Public School</h3>
+            <p class="ticket-role">Retrofit plan to optimize energy use across a 2,258 m² school building</p>
+            <ul>
+              <li>Identified HVAC and lighting inefficiencies, proposing 10.9% annual savings (~$18K/year).</li>
+              <li>Modeled a 4.4-year payback, 54.3% IRR, and 8.7% GHG reduction.</li>
+              <li>Recommended 36 occupancy sensors to cut usage further; presented findings to the school board.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">RETScreen</span><span class="tag">Benchmarking</span><span class="tag">Cost-benefit analysis</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head"><span class="idx">05</span><h2>Education</h2></div>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div>
+              <h3>Energy Management, Postgraduate Certificate</h3>
+              <p>Algonquin College</p>
+            </div>
+            <span class="when">SEP 2024 – APR 2025</span>
+          </div>
+          <div class="edu-item">
+            <div>
+              <h3>Software QA &amp; Test Engineering</h3>
+              <p>Conestoga College</p>
+            </div>
+            <span class="when">SEP 2023 – APR 2024</span>
+          </div>
+          <div class="edu-item">
+            <div>
+              <h3>Bachelor of Computer Application</h3>
+              <p>Guru Nanak Dev University</p>
+            </div>
+            <span class="when">MAY 2019 – APR 2022</span>
+          </div>
+        </div>
+        <p class="cert-line"><span>Certifications:</span> AWS Solutions Architect · Android Basics (Kotlin) · Deep Learning (Coursera)</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><span class="idx">06</span><h2>Contact</h2></div>
+        <div class="contact-panel">
+          <div>
+            <span class="email-line"><span>Email</span>arnsurecan@gmail.com</span>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:arnsurecan@gmail.com">Send an email</a>
+            <button class="btn" id="copyEmailBtn" type="button">Copy email<span class="copy-note" id="copyNote">Copied</span></button>
+            <a class="btn" href="https://www.linkedin.com/in/akhilesh-narotra-30b567290" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/min-ti" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <p>Thank you for visiting!</p>
+    <p>Akhilesh Narotra · Ottawa, ON · Last updated 2026</p>
   </footer>
+
+  <script>
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const copyNote = document.getElementById('copyNote');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('arnsurecan@gmail.com');
+          copyNote.classList.add('show');
+          setTimeout(() => copyNote.classList.remove('show'), 1800);
+        } catch (e) {
+          window.location.href = 'mailto:arnsurecan@gmail.com';
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
