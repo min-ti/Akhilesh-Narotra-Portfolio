@@ -5,20 +5,6 @@ Welcome to my personal portfolio site built with HTML and CSS. This site showcas
 
 https://min-ti.github.io/Akhilesh-Narotra-Portfolio/
 
-
-## Skills
-- QA Testing (Selenium, JIRA)
-- Energy Modeling (RETScreen, Power BI)
-- UX/UI Design (Figma)
-- Programming (Python, Java, SQL)
-
-## Projects
-- Web Banking QA Testing
-- Energy Audit – RETScreen
-- UX Redesign – Student Portal
-
-
-
 ## Contact
 Email: `arnsurecan@gmail.com`
 www.linkedin.com/in/akhilesh-narotra-30b567290
