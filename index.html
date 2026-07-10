@@ -12,17 +12,19 @@
 </head>
 <body>
 
+  <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
   <header class="site-nav">
     <div class="wrap">
       <a href="#home" class="brand">AN&nbsp;/&nbsp;LOG</a>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-nav="about">About</a></li>
+          <li><a href="#skills" data-nav="skills">Skills</a></li>
+          <li><a href="#experience" data-nav="experience">Experience</a></li>
+          <li><a href="#projects" data-nav="projects">Projects</a></li>
+          <li><a href="#education" data-nav="education">Education</a></li>
+          <li><a href="#contact" data-nav="contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -32,12 +34,13 @@
 
     <!-- Hero -->
     <section id="home" class="hero">
+      <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
       <div class="wrap">
         <span class="status-pill"><span class="dot"></span>Open to roles in QA, Data, Energy &amp; Technical Support — Ottawa, ON</span>
         <div class="hero-grid">
           <div>
             <h1>Akhilesh Narotra</h1>
-            <p class="role">QA Analyst &amp; Technical Support Professional — AI, Data &amp; Web Systems</p>
+            <p class="role"><span id="typewriter"></span><span class="type-cursor">|</span></p>
             <p class="availability">✅ Available for full-time roles starting immediately</p>
             <div class="hero-actions">
               <a class="btn primary" href="#projects">View project log</a>
@@ -51,7 +54,7 @@
 
     <!-- About -->
     <section id="about">
-      <div class="wrap">
+      <div class="wrap reveal">
         <div class="section-head"><span class="idx">01</span><h2>Summary</h2></div>
         <p class="section-intro" style="margin-top:0;">
           Results-driven QA analyst and technical support professional with hands-on experience in software testing, data operations, and user support. Skilled in manual and automated testing (Selenium WebDriver), defect tracking (JIRA/Agile), regression testing, and data quality assurance (SQL, Power BI). Proficient in Python, AWS, and Linux. Detail-oriented and solution-focused, bridging technical challenges with user needs. Seeking QA Analyst, Technical Support Engineer, or Data Quality Analyst roles.
@@ -61,7 +64,7 @@
 
     <!-- Skills -->
     <section id="skills">
-      <div class="wrap">
+      <div class="wrap reveal">
         <div class="section-head"><span class="idx">02</span><h2>Skills</h2></div>
         <div class="skills-grid">
           <div class="skill-group">
@@ -130,10 +133,10 @@
 
     <!-- Experience -->
     <section id="experience">
-      <div class="wrap">
+      <div class="wrap reveal">
         <div class="section-head"><span class="idx">03</span><h2>Experience</h2></div>
 
-        <div class="log-entry">
+        <div class="log-entry reveal-item">
           <div class="log-date">NOV 2024 —<br>PRESENT</div>
           <div class="log-body">
             <h3>Junior Data Operations Analyst</h3>
@@ -147,7 +150,7 @@
           </div>
         </div>
 
-        <div class="log-entry">
+        <div class="log-entry reveal-item">
           <div class="log-date">SEP 2024 —<br>PRESENT</div>
           <div class="log-body">
             <h3>Sales Associate (Customer Support Focus)</h3>
@@ -160,7 +163,7 @@
           </div>
         </div>
 
-        <div class="log-entry">
+        <div class="log-entry reveal-item">
           <div class="log-date">SEP 2024 —<br>APR 2025</div>
           <div class="log-body">
             <h3>Food Cupboard Assistant</h3>
@@ -177,11 +180,20 @@
 
     <!-- Projects -->
     <section id="projects">
-      <div class="wrap">
+      <div class="wrap reveal">
         <div class="section-head"><span class="idx">04</span><h2>Project Log</h2></div>
         <p class="section-intro">Five closed tickets spanning QA, UX design, and renewable energy systems. Starred tickets (★) are the top pick from each track — QA, Energy, and UX.</p>
 
-        <div class="ticket featured">
+        <div class="filter-row" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="qa" type="button">QA</button>
+          <button class="filter-btn" data-filter="energy" type="button">Energy</button>
+          <button class="filter-btn" data-filter="ux" type="button">UX</button>
+          <button class="btn run-tests-btn" id="runTestsBtn" type="button">▶ Run test suite</button>
+        </div>
+        <p class="test-toast" id="testToast" role="status" aria-live="polite"></p>
+
+        <div class="ticket featured reveal-item" data-category="qa">
           <div class="ticket-head">
             <span class="ticket-id"><span class="cat-tag cat-qa">QA</span>AN-001 · QA Engineer</span>
             <span class="ticket-status">RESOLVED</span>
@@ -197,10 +209,18 @@
             <div class="tag-row">
               <span class="tag">Selenium</span><span class="tag">JIRA</span><span class="tag">Agile</span>
             </div>
+            <button class="case-study-toggle" data-target="case-001" aria-expanded="false">View full case study <span class="chevron">▾</span></button>
+            <div class="case-study-wrap" id="case-001">
+              <div class="case-study-inner">
+                <div class="case-block"><h4>The challenge</h4><p>The banking application had no formalized regression suite, so every release risked shipping broken login or transaction flows undetected.</p></div>
+                <div class="case-block"><h4>My approach</h4><p>Built a manual and automated testing framework using Selenium WebDriver, covering the highest-risk transaction paths, and logged every defect in JIRA with reproducible steps for engineering.</p></div>
+                <div class="case-block"><h4>The result</h4><p>Cut regression testing time by 30% and gave the team a repeatable safety net that catches critical bugs before release.</p></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="ticket">
+        <div class="ticket reveal-item" data-category="ux">
           <div class="ticket-head">
             <span class="ticket-id"><span class="cat-tag cat-ux">UX</span>AN-002 · UX/UI Designer</span>
             <span class="ticket-status">SHIPPED</span>
@@ -216,10 +236,18 @@
             <div class="tag-row">
               <span class="tag">Figma</span><span class="tag">User personas</span><span class="tag">A/B testing</span>
             </div>
+            <button class="case-study-toggle" data-target="case-002" aria-expanded="false">View full case study <span class="chevron">▾</span></button>
+            <div class="case-study-wrap" id="case-002">
+              <div class="case-study-inner">
+                <div class="case-block"><h4>The challenge</h4><p>Students frequently abandoned key portal tasks like registration and checking grades, due to a poor mobile layout and inaccessible design patterns.</p></div>
+                <div class="case-block"><h4>My approach</h4><p>Rebuilt the information architecture around WCAG-compliant wireframes and high-fidelity mockups, then validated every major flow with real users before handoff.</p></div>
+                <div class="case-block"><h4>The result</h4><p>Mobile navigation friction dropped by 30%, and the redesign shipped with accessibility built in from the start rather than patched on afterward.</p></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="ticket featured">
+        <div class="ticket featured reveal-item" data-category="ux">
           <div class="ticket-head">
             <span class="ticket-id"><span class="cat-tag cat-ux">UX</span>AN-003 · UX Designer</span>
             <span class="ticket-status">PROTOTYPED</span>
@@ -235,10 +263,18 @@
             <div class="tag-row">
               <span class="tag">Figma</span><span class="tag">Adobe XD</span><span class="tag">Journey mapping</span>
             </div>
+            <button class="case-study-toggle" data-target="case-003" aria-expanded="false">View full case study <span class="chevron">▾</span></button>
+            <div class="case-study-wrap" id="case-003">
+              <div class="case-study-inner">
+                <div class="case-block"><h4>The challenge</h4><p>Most meditation apps overload users with options up front, which works against the calm experience they're supposed to deliver.</p></div>
+                <div class="case-block"><h4>My approach</h4><p>Applied color psychology and minimalist UI principles to strip the interface down to what mattered, then stress-tested the flow through A/B usability sessions.</p></div>
+                <div class="case-block"><h4>The result</h4><p>A prototype that felt intuitive on first use, validated directly by test participants rather than assumptions.</p></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="ticket featured">
+        <div class="ticket featured reveal-item" data-category="energy">
           <div class="ticket-head">
             <span class="ticket-id"><span class="cat-tag cat-energy">Energy</span>AN-004 · Renewable Energy System Designer</span>
             <span class="ticket-status">DEPLOYED</span>
@@ -254,10 +290,18 @@
             <div class="tag-row">
               <span class="tag">RETScreen</span><span class="tag">Stakeholder mapping</span><span class="tag">Financial modeling</span>
             </div>
+            <button class="case-study-toggle" data-target="case-004" aria-expanded="false">View full case study <span class="chevron">▾</span></button>
+            <div class="case-study-wrap" id="case-004">
+              <div class="case-study-inner">
+                <div class="case-block"><h4>The challenge</h4><p>Isla Mocha's 30 households relied on costly, high-emission diesel generators with no renewable alternative in place.</p></div>
+                <div class="case-block"><h4>My approach</h4><p>Ran solar resource assessments and load forecasting, consulted with local stakeholders, and designed a 50 kW PV system paired with lithium-ion storage sized for 2-day autonomy.</p></div>
+                <div class="case-block"><h4>The result</h4><p>A 7.2-year payback system that electrifies all 30 homes while cutting emissions and aligning with Chile's renewable energy targets.</p></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="ticket">
+        <div class="ticket reveal-item" data-category="energy">
           <div class="ticket-head">
             <span class="ticket-id"><span class="cat-tag cat-energy">Energy</span>AN-005 · Energy Auditor &amp; Analyst</span>
             <span class="ticket-status">AUDITED</span>
@@ -273,6 +317,14 @@
             <div class="tag-row">
               <span class="tag">RETScreen</span><span class="tag">Benchmarking</span><span class="tag">Cost-benefit analysis</span>
             </div>
+            <button class="case-study-toggle" data-target="case-005" aria-expanded="false">View full case study <span class="chevron">▾</span></button>
+            <div class="case-study-wrap" id="case-005">
+              <div class="case-study-inner">
+                <div class="case-block"><h4>The challenge</h4><p>Viscount Alexander Public School's aging HVAC and lighting systems were driving avoidable energy costs across 2,258 m² of space.</p></div>
+                <div class="case-block"><h4>My approach</h4><p>Audited the building systems, modeled a retrofit plan with financial and GHG impact projections, and proposed 36 occupancy sensors to extend savings further.</p></div>
+                <div class="case-block"><h4>The result</h4><p>A retrofit plan projecting 10.9% annual savings (~$18K/year), a 4.4-year payback, and an 8.7% cut in emissions — presented directly to the school board.</p></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -281,7 +333,7 @@
 
     <!-- Education -->
     <section id="education">
-      <div class="wrap">
+      <div class="wrap reveal">
         <div class="section-head"><span class="idx">05</span><h2>Education</h2></div>
         <div class="edu-list">
           <div class="edu-item">
@@ -312,7 +364,7 @@
 
     <!-- Contact -->
     <section id="contact">
-      <div class="wrap">
+      <div class="wrap reveal">
         <div class="section-head"><span class="idx">06</span><h2>Contact</h2></div>
         <p class="section-intro" style="margin-top:0;">📩 Interested in collaborating? Reach out by email or connect on LinkedIn below.</p>
         <div class="contact-panel">
@@ -323,13 +375,14 @@
             <a class="btn primary" href="mailto:arnsurecan@gmail.com">Send an email</a>
             <button class="btn" id="copyEmailBtn" type="button">Copy email<span class="copy-note" id="copyNote">Copied</span></button>
             <a class="btn" href="https://www.linkedin.com/in/akhilesh-narotra-30b567290" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://github.com/min-ti" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
     </section>
 
   </main>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
 
   <footer>
     <p>Akhilesh Narotra · Ottawa, ON · Last updated 2026</p>
@@ -349,6 +402,192 @@
         }
       });
     }
+
+    // --- Scroll progress bar ---
+    const progressBar = document.getElementById('scrollProgressBar');
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      if (progressBar) progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // --- Active nav highlighting ---
+    const navLinks = document.querySelectorAll('nav a[data-nav]');
+    const navSections = Array.from(navLinks)
+      .map(link => document.getElementById(link.dataset.nav))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const link = document.querySelector(`nav a[data-nav="${entry.target.id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+    navSections.forEach(section => navObserver.observe(section));
+
+    // --- Scroll-reveal animations ---
+    const revealTargets = document.querySelectorAll('.reveal, .reveal-item');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
+
+    // --- Project filter ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const tickets = document.querySelectorAll('.ticket[data-category]');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        tickets.forEach(ticket => {
+          const show = filter === 'all' || ticket.dataset.category === filter;
+          ticket.classList.toggle('ticket-hidden', !show);
+        });
+      });
+    });
+
+    // --- Back to top ---
+    const backToTop = document.getElementById('backToTop');
+    function toggleBackToTop() {
+      if (!backToTop) return;
+      backToTop.classList.toggle('show', window.scrollY > 480);
+    }
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+    if (backToTop) {
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // --- Typewriter role text ---
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const typewriterEl = document.getElementById('typewriter');
+    const roles = [
+      'QA Analyst & Technical Support Professional',
+      'Data Quality & Operations Analyst',
+      'Renewable Energy Systems Designer',
+      'UX Researcher & Designer'
+    ];
+
+    if (typewriterEl) {
+      if (reduceMotion) {
+        typewriterEl.textContent = roles[0];
+      } else {
+        let roleIndex = 0, charIndex = 0, deleting = false;
+        const TYPE_SPEED = 55, DELETE_SPEED = 30, HOLD = 1600, GAP = 400;
+
+        function tick() {
+          const current = roles[roleIndex];
+          if (!deleting) {
+            charIndex++;
+            typewriterEl.textContent = current.slice(0, charIndex);
+            if (charIndex === current.length) {
+              deleting = true;
+              setTimeout(tick, HOLD);
+              return;
+            }
+            setTimeout(tick, TYPE_SPEED);
+          } else {
+            charIndex--;
+            typewriterEl.textContent = current.slice(0, charIndex);
+            if (charIndex === 0) {
+              deleting = false;
+              roleIndex = (roleIndex + 1) % roles.length;
+              setTimeout(tick, GAP);
+              return;
+            }
+            setTimeout(tick, DELETE_SPEED);
+          }
+        }
+        setTimeout(tick, 500);
+      }
+    }
+
+    // --- Hero mouse spotlight ---
+    const heroSection = document.querySelector('.hero');
+    const heroSpotlight = document.getElementById('heroSpotlight');
+    if (heroSection && heroSpotlight && !reduceMotion) {
+      heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        heroSpotlight.style.setProperty('--spot-x', x + '%');
+        heroSpotlight.style.setProperty('--spot-y', y + '%');
+        heroSpotlight.style.opacity = '1';
+      });
+      heroSection.addEventListener('mouseleave', () => {
+        heroSpotlight.style.opacity = '0';
+      });
+    }
+
+    // --- Run test suite ---
+    const runTestsBtn = document.getElementById('runTestsBtn');
+    const testToast = document.getElementById('testToast');
+    if (runTestsBtn) {
+      runTestsBtn.addEventListener('click', () => {
+        if (runTestsBtn.disabled) return;
+        runTestsBtn.disabled = true;
+        runTestsBtn.textContent = '⏳ Running…';
+        testToast.textContent = '';
+        testToast.classList.remove('show');
+
+        const allTickets = document.querySelectorAll('.ticket[data-category]');
+        const results = [];
+
+        allTickets.forEach((ticket, i) => {
+          const statusEl = ticket.querySelector('.ticket-status');
+          const originalText = statusEl.textContent;
+          results.push(originalText);
+          setTimeout(() => {
+            statusEl.textContent = 'RUNNING…';
+            statusEl.classList.add('status-running');
+          }, i * 260);
+
+          setTimeout(() => {
+            statusEl.classList.remove('status-running');
+            statusEl.textContent = originalText;
+            statusEl.classList.add('status-flash');
+            setTimeout(() => statusEl.classList.remove('status-flash'), 700);
+          }, i * 260 + 500);
+        });
+
+        const totalTime = allTickets.length * 260 + 700;
+        setTimeout(() => {
+          runTestsBtn.disabled = false;
+          runTestsBtn.textContent = '▶ Run test suite';
+          testToast.textContent = `✓ ${allTickets.length}/${allTickets.length} tickets verified — all systems green`;
+          testToast.classList.add('show');
+          setTimeout(() => testToast.classList.remove('show'), 3200);
+        }, totalTime);
+      });
+    }
+    // --- Case study expand/collapse ---
+    document.querySelectorAll('.case-study-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (!target) return;
+        const isOpen = target.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        btn.querySelector('.chevron').textContent = isOpen ? '▴' : '▾';
+        btn.firstChild.textContent = isOpen ? 'Hide case study ' : 'View full case study ';
+      });
+    });
   </script>
 
 </body>
